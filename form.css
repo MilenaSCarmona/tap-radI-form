@@ -1,0 +1,270 @@
+:root {    
+--sucess: #00C57C;
+--error: #F59393;
+
+--bg-first: #F2F2F2;
+
+--gray-first: #DDE3E9;
+--gray-second: #C5CFD6;
+--gray-third: #979797;
+--gray-four: #555555;
+--purple-first: #663399;
+--blue-first: #2F3676;
+--blue-second: #191847;
+--white-first: #FFFFFF;
+--black-first: #071723;
+
+--box-shadow-first: 10px 22px 24px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color:var(--purple-first);
+}
+
+.cmp-form {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.cmp-form img {
+    width: 168px;
+    height: 168px;
+}
+
+.cmp-form__card {
+    background-color: var(--bg-first);
+    border: 1px solid var(--gray-third);
+    box-shadow: var(--box-shadow-first);
+    border-radius: 8px;
+    width: 560px;
+    height: 794px;
+    display: grid;
+}
+
+.cmp-form__card-header {
+    width: 100%;
+    height: 185px;
+    background: url(./resources/images/bg.png);
+    display: flex;
+    background-repeat: no-repeat;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.cmp-form__card-title {
+    font-family: "Inter", sans-serif;
+    font-size: 23px;
+    line-height: 28px;
+    color: var(--white-first);
+    padding-left: 24px;
+}
+
+.cmp-form__card-title h2 {
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 0;
+    word-break: break-word;
+    width: 59%;
+} 
+
+.cmp-form__card-title span {
+    font-weight: 600;
+} 
+
+.cmp-form__card-content h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--black-first);
+}
+
+.cmp-form__card-content {
+    padding: 0 24px 16px 24px;
+}
+
+.cmp-form__card-content input[type="number"] {
+    background-color: var(--gray-first);
+    border: 1px solid var(--blue-first);
+    border-radius: 4px;
+    width: 58px;
+    height: 40px;
+    padding: 0;
+    margin: 0 3px;
+    text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black-first);
+}
+
+.cmp-form__card-content input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.cmp-form__card-counter{
+    display: inline-flex;
+}
+
+.tip-value{
+    font-size: 24px;
+    font-weight: 900;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+input, label {
+    cursor: pointer;
+}
+
+.erro input[type='checkbox'] {
+    background-color:var(--error);
+    border: 1px solid var(--error);  
+}
+  
+.cmp-form__card-checkbox {
+    display: flex;
+    appearance: none;
+    background-color: var(--blue-first);
+    height: 24px;
+    width: 24px;
+    border-radius: 20%;
+    margin-right: 9px;
+}
+
+.cmp-form__card-checkbox::after {
+      color: transparent;
+      text-shadow: 0 0 0 transparent;
+      margin: auto;
+}
+
+.cmp-form__card-checkbox:hover {
+    background-color: var(--blue-second);
+    transition: all 200ms ease-in;
+}
+    
+.cmp-form__card-checkbox:checked::after {
+    color: var(--white-first);
+    transition: all 200ms ease-in;
+}
+
+.cmp-form__card-checkbox::after {
+    content: '✔'; 
+    font-size: 18px;
+}
+
+.cmp-form__card-textarea {
+    background-color: var(--gray-first);
+    border: 1px solid var(--blue-first);
+    border-radius: 4px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    padding: 16px;
+}
+
+.cmp-form__card-textarea:focus-visible , 
+.cmp-form__card-content input[type="number"]:focus-visible {
+    outline: 2px solid var(--blue-first) ;
+}
+
+.cmp-form__card-checklist label {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.cmp-form__card-footer {
+    background-color: var(--gray-first);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.cmp-form__card-footer  span {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--sucess);
+}
+
+button {
+    background: var(--blue-first);
+    border-radius: 7px;
+    color: var(--white-first);
+    padding: 13px;
+    border: transparent;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--blue-second);
+}
+
+.erro {
+    background-color: var(--error) !important;
+    border: 1px solid var(--error) !important;  
+}
+
+.disabled {
+    background-color: var(--gray-second);
+    border: 2px solid var(--gray-four);
+    color: var(--gray-four);
+}
+
+.disabled-btn {
+    background-color: var(--gray-second);
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--error);
+    color: var(--white-first);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@media(max-width: 768px) {
+    .cmp-form__card-footer span {
+        font-size: 12px;
+    } 
+}

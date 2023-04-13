@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="form.css" />
+    </head>
+    <body>
+        <div class="cmp-form">
+            <div class="cmp-form__card">
+                <div class="cmp-form__card-header">
+                    <div class="cmp-form__card-title">
+                        <h2>Formulário para compra de</h2>
+                        <span>Pacote de Stickers</span>
+                    </div>
+                </div>
+                <div class="cmp-form__card-content">
+                    <h3>Quais stickers?</h3>
+                    <div class="cmp-form__card-checklist">
+                        <label for="react">
+                            <input type="checkbox" value="react" id="react" class="cmp-form__card-checkbox">
+                            React
+                        </label>
+                        <label for="vue">
+                            <input type="checkbox" value="vue" id="vue" class="cmp-form__card-checkbox">
+                            Vue
+                        </label>
+                        <label for="angular">
+                            <input type="checkbox" value="angular" id="angular" class="cmp-form__card-checkbox">
+                            Angular
+                        </label>
+                    </div>
+
+                    <h3>Quantos stickers de cada?</h3>
+            
+                    <div class="cmp-form__card-counter">
+                        <button  class="tip-value" type="button" id="less">-</button> 
+                            <input type="number" class="cmp-form__card-input" id="x" value="0">
+                        <button class="tip-value" type="button" id="more">+</i></button>
+                    </div>
+                    
+                    <h3>Observações:</h3>
+                    <textarea class="cmp-form__card-textarea" id="cmp-form__card-textarea" rows="8"></textarea>
+                </div>
+                <div class="cmp-form__card-footer">
+                    <span></span>
+                    <button id="formValidate" class="">ENVIAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast">Este campo é de preenchimento obrigatório</div>
+       
+        <script src="./js/Form.js"></script>
+        <script src="./js/FormView.js"></script>
+        <script src="./js/FormController.js"></script>
+        
+        <script>
+            let controller = new FormController();
+        </script>
+    </body>
+</html>
